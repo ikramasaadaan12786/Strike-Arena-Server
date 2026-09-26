@@ -1,7 +1,7 @@
 FROM node:20-alpine
 WORKDIR /app
-COPY package*.json ./
+COPY strike-arena-server/package*.json ./
 RUN npm install --production
-COPY . .
+COPY strike-arena-server/ ./
 EXPOSE 10000
 CMD ["node", "server.js"]
