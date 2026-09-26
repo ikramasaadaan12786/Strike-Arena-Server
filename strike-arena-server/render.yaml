@@ -1,0 +1,18 @@
+# STRIKE ARENA server — Render Blueprint (free tier)
+#
+# IMPORTANT: rooms are stored in-memory on a single Node process.
+# DO NOT scale past 1 instance (horizontal scaling would split rooms apart).
+
+services:
+  - type: web
+    name: strike-arena-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    numInstances: 1
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      # PORT is provided automatically by Render; server.js reads process.env.PORT.

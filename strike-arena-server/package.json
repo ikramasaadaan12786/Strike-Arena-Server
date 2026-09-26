@@ -1,0 +1,1 @@
+{"dependencies":{"ws":"^8.18.0"},"description":"Authoritative multiplayer server for STRIKE ARENA (original 5v5 team-deathmatch browser FPS)","engines":{"node":">=18"},"license":"UNLICENSED","main":"server.js","name":"strike-arena-server","private":true,"scripts":{"start":"node server.js","test":"node test_sim.js"},"version":"1.0.0"}
